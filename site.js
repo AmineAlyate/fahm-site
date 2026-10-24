@@ -10,14 +10,16 @@
     a.addEventListener("click", function () { store.set(a.getAttribute("data-lang")); });
   });
 
-  // First visit to the English home page from a French browser: open the French one.
-  // Never on a return visit or after a choice, and never from inside the site.
+  // First visit to the English home page from a browser in another language the site has:
+  // open that one. Never on a return visit or after a choice, and never from inside the site.
   var home = document.body.getAttribute("data-home");
   if (home === "en" && !store.get()) {
     var langs = navigator.languages || [navigator.language || ""];
+    var code = (langs[0] || "").slice(0, 2).toLowerCase();
+    if (code === "in") code = "id"; // old Android code for Indonesian
     var fromSite = document.referrer && document.referrer.indexOf(location.host) !== -1;
-    var fr = document.querySelector('a.lang[data-lang="fr"]');
-    if (!fromSite && fr && /^fr\b/i.test(langs[0] || "")) location.replace(fr.href);
+    var link = code !== "en" && document.querySelector('a[data-lang="' + code + '"]');
+    if (!fromSite && link) location.replace(link.href);
   }
 
   // The sample question in "How a lesson works".
