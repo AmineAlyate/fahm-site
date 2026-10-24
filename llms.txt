@@ -7,7 +7,7 @@ Key facts:
 - Each lesson: every word on its own (Arabic, transliteration, meaning, recitation audio for Quran words), then the whole phrase, then a short quiz. Learned words come back for spaced review.
 - Also: a daily reminder that teaches one phrase, an After Salah pack, a Ramadan pack, a kids mode, and a home screen widget.
 - Prayer phrases reviewed by a qualified teacher. Quran text, word-by-word data and recitations from Quran.com.
-- No account and no ads; progress stays on the phone.
+- No account and no ads in the app; progress stays on the phone. Optional ad measurement with Meta, only with the user's consent.
 - Google Play: https://play.google.com/store/apps/details?id=app.fahm.fahm
 - Contact: medaminealyate@gmail.com
 
